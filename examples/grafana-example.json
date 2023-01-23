@@ -84,7 +84,7 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "status_cake_test_info * on(test_id) group_right(test_name) status_cake_test_uptime_percent",
+          "expr": "(1+status_cake_test_info) * on(test_id) group_right(test_name) status_cake_test_uptime_percent",
           "format": "time_series",
           "interval": "$__interval",
           "legendFormat": "{{test_name}}",
